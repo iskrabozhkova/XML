@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:books="http://books.org" xmlns:records="http://record.org" >
+<books:book>
+    <books:title>A true story</books:title>
+    <books:description>A real cool publication</books:description>
+</books:book>
+<records:record>
+    <records:name>Miller</records:name>
+    <records:title>Dr. </records:title>
+    <records:publications> ... </records:publications>
+</records:record>
+</root>

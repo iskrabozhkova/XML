@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+    <row>
+        <Condition>Equal to</Condition>
+        <Operator>=</Operator>
+        <FormulaExample>=A1=B1</FormulaExample>
+        <Description>Some description</Description>
+    </row>
+    <row>
+        <Condition>Not equal to</Condition>
+        <Operator>&lt;&gt;</Operator>
+        <FormulaExample>A1&lt;&gt;B1</FormulaExample>
+        <Description>Some description</Description>
+    </row>
+    <row>
+        <Condition>Greater than</Condition>
+        <Operator>&gt;</Operator>
+        <FormulaExample>A&gt;B</FormulaExample>
+        <Description>Some description</Description>
+    </row>
+    <row>
+        <Condition>Less than</Condition>
+        <Operator>&lt;</Operator>
+        <FormulaExample>A&lt;B</FormulaExample>
+        <Description>Some description</Description>
+    </row>
+    <row>
+        <Condition>Greater than or equal to</Condition>
+        <Operator>&gt;=</Operator>
+        <FormulaExample>=A1&gt;=B1></FormulaExample>
+        <Description>Some description</Description>
+    </row>
+    <row>
+        <Condition>Less than or equal to</Condition>
+        <Operator>&lt;=</Operator>
+        <FormulaExample>=A1&lt;=B1></FormulaExample>
+        <Description>Some description</Description>
+    </row>
+</table>

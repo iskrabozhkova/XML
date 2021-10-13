@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CinemaCityParadise>
+    <BasicInformation>
+        <address>Address</address>
+        <number>084442244</number>
+        <info>Cinema City Paradise</info>
+    </BasicInformation>
+    <prices>
+        <Monday>Monday</Monday>
+    </prices>
+    <Movies>
+        <movie name="Film" date="10.05" time="10:00"></movie>
+    </Movies>
+</CinemaCityParadise>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<table>
+    <row>
+        <Condition>Equal to</Condition>
+        <Operator>=</Operator>
+        <FormulaExample>=A1=B1</FormulaExample>
+        <Description>Some description</Description>
+    </row>
+    <row>
+        <Condition>Not equal to</Condition>
+        <Operator><![CDATA[<>]]></Operator>
+        <FormulaExample><![CDATA[=A1<>B1]]></FormulaExample>
+        <Description>Some description</Description>
+    </row>
+    <row>
+        <Condition>Greater than</Condition>
+        <Operator><![CDATA[>]]></Operator>
+        <FormulaExample><![CDATA[=A1>B1]]></FormulaExample>
+        <Description>Some description</Description>
+    </row>
+    <row>
+        <Condition>Less than</Condition>
+        <Operator><![CDATA[<]]></Operator>
+        <FormulaExample><![CDATA[=A1<B1]]></FormulaExample>
+        <Description>Some description</Description>
+    </row>
+    <row>
+        <Condition>Greater than or equal to</Condition>
+        <Operator><![CDATA[>=]]></Operator>
+        <FormulaExample><![CDATA[=A1>=B1]]></FormulaExample>
+        <Description>Some description</Description>
+    </row>
+    <row>
+        <Condition>Less than or equal to</Condition>
+        <Operator><![CDATA[<=]]></Operator>
+        <FormulaExample><![CDATA[=A1<=B1]]></FormulaExample>
+        <Description>Some description</Description>
+    </row>
+</table>
