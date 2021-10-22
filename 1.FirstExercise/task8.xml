@@ -2,14 +2,93 @@
 
 <CinemaCityParadise>
     <BasicInformation>
-        <address>Address</address>
-        <number>084442244</number>
-        <info>Cinema City Paradise</info>
+        <address>София, бул. Черни връх 100, в сградата на Paradise Center</address>
+        <number>02 903 74 74</number>
+        <email>info.paradise@cinemacity.bg</email>
+        <info>Мултиплекс Cinema City Парадайз разполага с 14 модерни киносалона с 2166 места, първата 4DX зала в България и съоръжения за посетители в инвалидни колички.</info>
     </BasicInformation>
-    <prices>
-        <Monday>Monday</Monday>
-    </prices>
+    <Prices>
+        <Monday>
+            <CinemaType type="2D">
+                <Price>15.00</Price>
+            </CinemaType>
+            <CinemaType type="3D">
+                <Price>20.00</Price>
+            </CinemaType>
+            <CinemaType type="4D">
+                <Price>25.00</Price>
+            </CinemaType>
+        </Monday>
+        <Tuesday>
+            <CinemaType type="2D">
+                <Price>15.00</Price>
+            </CinemaType>
+            <CinemaType type="3D">
+                <Price>20.00</Price>
+            </CinemaType>
+            <CinemaType type="4D">
+                <Price>25.00</Price>
+            </CinemaType>
+        </Tuesday>
+        <Wednesday>
+            <CinemaType type="2D">
+                <Price>15.00</Price>
+            </CinemaType>
+            <CinemaType type="3D">
+                <Price>20.00</Price>
+            </CinemaType>
+            <CinemaType type="4D">
+                <Price>25.00</Price>
+            </CinemaType>
+        </Wednesday>
+        <Thursday>
+            <CinemaType type="2D">
+                <Price>15.00</Price>
+            </CinemaType>
+            <CinemaType type="3D">
+                <Price>20.00</Price>
+            </CinemaType>
+            <CinemaType type="4D">
+                <Price>25.00</Price>
+            </CinemaType>
+        </Thursday>
+        <Friday>
+            <CinemaType type="2D">
+                <Price>15.00</Price>
+            </CinemaType>
+            <CinemaType type="3D">
+                <Price>20.00</Price>
+            </CinemaType>
+            <CinemaType type="4D">
+                <Price>25.00</Price>
+            </CinemaType>
+        </Friday>
+        <Saturday>
+            <CinemaType type="2D">
+                <Price>10.00</Price>
+            </CinemaType>
+            <CinemaType type="3D">
+                <Price>15.00</Price>
+            </CinemaType>
+            <CinemaType type="4D">
+                <Price>30.00</Price>
+            </CinemaType>
+        </Saturday>
+        <Sunday>
+            <CinemaType type="2D">
+                <Price>10.00</Price>
+            </CinemaType>
+            <CinemaType type="3D">
+                <Price>25.00</Price>
+            </CinemaType>
+            <CinemaType type="4D">
+                <Price>30.00</Price>
+            </CinemaType>
+        </Sunday>
+    </Prices>
     <Movies>
-        <movie name="Film" date="10.05" time="10:00"></movie>
+        <Movie name="Movie" date="10.05" time="10:00"></Movie>
+        <Movie name="Other movie" date="25.06" time="11:00"></Movie>
+        <Movie name="Movie" date="13.07" time="12:00"></Movie>
     </Movies>
 </CinemaCityParadise>

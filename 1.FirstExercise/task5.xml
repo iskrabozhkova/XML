@@ -1,39 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<table>
-    <row>
+<Table>
+    <Row>
         <Condition>Equal to</Condition>
         <Operator>=</Operator>
         <FormulaExample>=A1=B1</FormulaExample>
-        <Description>Some description</Description>
-    </row>
-    <row>
+        <Description>The formula returns TRUE if a value in cell A1 is equal to the values in cell B1; FALSE otherwise.
+        </Description>
+    </Row>
+    <Row>
         <Condition>Not equal to</Condition>
         <Operator>&lt;&gt;</Operator>
         <FormulaExample>A1&lt;&gt;B1</FormulaExample>
-        <Description>Some description</Description>
-    </row>
-    <row>
+        <Description>The formula returns TRUE if a value in cell A1 is not equal to the value in cell B1; FALSE otherwise.</Description>
+    </Row>
+    <Row>
         <Condition>Greater than</Condition>
         <Operator>&gt;</Operator>
         <FormulaExample>A&gt;B</FormulaExample>
-        <Description>Some description</Description>
-    </row>
-    <row>
+        <Description>The formula returns TRUE if a value in cell A1 is greater than a value in cell B1; otherwise it returns FALSE.
+        </Description>
+    </Row>
+    <Row>
         <Condition>Less than</Condition>
         <Operator>&lt;</Operator>
         <FormulaExample>A&lt;B</FormulaExample>
-        <Description>Some description</Description>
-    </row>
-    <row>
+        <Description>The formula returns TRUE if a value in cell A1 is less than in cell B1; otherwise it returns FALSE.
+        </Description>
+    </Row>
+    <Row>
         <Condition>Greater than or equal to</Condition>
         <Operator>&gt;=</Operator>
         <FormulaExample>=A1&gt;=B1></FormulaExample>
-        <Description>Some description</Description>
-    </row>
-    <row>
+        <Description>The formula returns TRUE if a value in cell A1 is greater than or equal to the values in cell B1; FALSE otherwise.
+        </Description>
+    </Row>
+    <Row>
         <Condition>Less than or equal to</Condition>
         <Operator>&lt;=</Operator>
         <FormulaExample>=A1&lt;=B1></FormulaExample>
-        <Description>Some description</Description>
-    </row>
-</table>
+        <Description>The formula returns TRUE if a value in cell A1 is less than or equal to the values in cell B1; FALSE otherwise.
+        </Description>
+    </Row>
+</Table>

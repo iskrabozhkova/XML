@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<words>
-    <first>1. ∀ x ∈ {y-10, y+10} ∃ i</first>
-    <second>2. Einführung</second>
-    <third>3. Γεια Γιάννη</third>
-    <forth>4. 嗨你好</forth>
-</words>
+<?xml version="1.0" encoding="UTF-8"?>
+<Expressions>
+    <Expression id="1">1. ∀ x ∈ {y-10, y+10} ∃ i</Expression>
+    <Expression id="2">2. Einführung</Expression>
+    <Expression id="3">3. Γεια Γιάννη</Expression>
+    <Expression id="4">4. 嗨你好</Expression>
+</Expressions>
