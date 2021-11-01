@@ -1,0 +1,37 @@
+<!--вътрешна декларация на нотация за image/jpeg -->
+<!NOTATION JPG SYSTEM "image/jpeg">
+<!--външна декларация на нотация за image/png -->
+<!NOTATION PNG PUBLIC "image.png" "image/png">
+<!--entity, използващо нотация за image/png -->
+<!ENTITY pngImgAddress PUBLIC "png" "https://www.linkpicture.com/q/2_170.png" NDATA PNG>
+<!--entity, използващо нотация за image/jpeg -->
+<!ENTITY jpgImgAddress SYSTEM "https://www.linkpicture.com/q/1_451.jpg" NDATA JPG>
+
+<!--общо entity, което задава стойността на елемента link на image-->
+<!ENTITY path "pathToImage">
+<!--параметризирано entity за елемента title-->
+<!ENTITY % title "title">
+<!--вложено entity в entity-->
+<!ENTITY % channelElements "(item+, %title;, link, language?, image*, description)">
+
+<!ELEMENT channel %channelElements;>
+<!ATTLIST channel version CDATA #REQUIRED>
+<!ELEMENT item ((%title;,link,description?)|(%title;,description?,link)|
+(description?,%title;,link)| (description?,link,%title;) | (link,%title;,description?) | (link,description?,%title;))>
+<!ELEMENT %title; (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT image (title | link | url)*>
+<!ATTLIST image src ENTITY #REQUIRED>
+<!ELEMENT url (#PCDATA)>
+
+
+
+
+
+
+
+
+
+   

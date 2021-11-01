@@ -1,4 +1,8 @@
 <?xml version="1.0"?>
+ <!--Направих файл shiporder.dtd, в който поставих дадената DTD граматика. 
+    Добавям го към xml файла със следния синтаксис: <!DOCTYPE root-element SYSTEM "file-name">, 
+    където root-element e shiporder, a file-name е shiporder.dtd.-->
+
 <!DOCTYPE shiporder SYSTEM "shiporder.dtd">
 <shiporder orderid="889923">
    <orderperson>John Smith</orderperson>

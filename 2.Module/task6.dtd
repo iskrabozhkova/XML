@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!--Това е dtd файла. Първо пишем root елемента, а след това описваме и неговите под-елементи. Ако има атрибути, също ги описваме.-->
+
+<!ELEMENT games (game)>
+<!ELEMENT game (home-team, ex-team, scores, yellows, reds)>
+<!ATTLIST game score CDATA #REQUIRED>
+<!ATTLIST score me CDATA #REQUIRED>
+<!ATTLIST score type (penalty|num) #IMPLIED>
+<!ELEMENT home-team (#PCDATA)>
+<!ELEMENT ex-team (#PCDATA)>
+<!--може да няма отбелязан резултат или да има повече от един-->
+<!ELEMENT scores (score)*>
+<!--ако няма отбелязан резултат, то играчите са 0, но ако има играчът е един-->
+<!ELEMENT score (player)*>
+<!ELEMENT player (#PCDATA) >
+<!--може да няма играчи, получили жълт или червен картон, но може и да има няколко-->
+<!ELEMENT yellows (player)* >
+<!ELEMENT reds (player)* >

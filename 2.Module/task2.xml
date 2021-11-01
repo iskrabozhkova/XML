@@ -1,15 +1,23 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <!--Към дадения XML документ включвам вътрешна DTD граматика. Най-отгоре е root елементът, а след това описвам
+      и неговите под-елементи, както и атрибутите им ако има такива. -->
+
 <!DOCTYPE games [
-<!ELEMENT games (game)*>
+   <!--може да няма игри или да са повече от една-->
+   <!ELEMENT games (game)*>
     <!ELEMENT game (home-team, ex-team, scores, yellows, reds)>
     <!ATTLIST game score CDATA #REQUIRED>
     <!ATTLIST score me CDATA #REQUIRED>
     <!ATTLIST score type (penalty|num) #IMPLIED>
     <!ELEMENT home-team (#PCDATA)>
     <!ELEMENT ex-team (#PCDATA)>
+     <!--може да няма отбелязан резултат или да има повече от един-->
     <!ELEMENT scores (score)*>
-    <!ELEMENT score (player)*>
+    <!--ако няма отбелязан резултат, то играчите са 0, но ако има играчът е един-->
+    <!ELEMENT score (player)?>
     <!ELEMENT player (#PCDATA) >
+    <!--може да няма играчи, получили жълт или червен картон, но може и да има няколко-->
     <!ELEMENT yellows (player)* >
     <!ELEMENT reds (player)* >
 ]>

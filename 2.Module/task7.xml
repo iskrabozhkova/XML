@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE channel SYSTEM "task7.dtd">
+<channel version="1.0">
+    <item>
+        <title>Amazon</title>
+        <link>https://www.amazon.com/</link>
+        <description>Info for Amazon</description>
+    </item>
+    <title>Amazon Music</title>
+    <link>https://www.amazon.com/music</link>
+    <language>English</language>
+    <image src="pngImgAddress">
+        <title>Amazon</title>
+        <link>&path;</link>
+        <url>https://www.linkpicture.com/q/2_170.png</url>
+    </image>
+    <image src="jpgImgAddress">
+        <title>Amazon</title>
+        <link>&path;</link>
+        <url>https://www.linkpicture.com/q/1_451.jpg</url>
+    </image>
+    <description>Some description</description>
+</channel>

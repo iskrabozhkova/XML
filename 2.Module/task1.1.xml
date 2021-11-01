@@ -1,4 +1,8 @@
 <?xml version="1.0"?>
+
+ <!--Използваме следния синтаксис: <!DOCTYPE root-element [element-declarations]>,
+    където root-element е shiporder.-->
+
 <!DOCTYPE shiporder[
     <!ELEMENT shiporder (orderperson,shipto,item+)>
     <!ATTLIST shiporder orderid CDATA #REQUIRED>

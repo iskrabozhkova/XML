@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <!--От схемата се вижда, че трябва да направим channel корен-елемент. Той трябва да има атрибут version затова го
+    означаваме като #REQUIRED. Под-елементите на channel са item, title, link, image, language и description като 
+    image и language може и да ги няма. Затова им поставяме от знаците за честота. Тъй като под-елементите на item 
+    и image нямат определена последователност, изброяваме всички възможни пермутации, които могат да се използват.
+    Под-елементът description на item е незадължителен и затова му поставяме оператор за честота.-->
+    
+<!DOCTYPE channel[
+    <!ELEMENT channel (item+, title, link, language?, image*,description)>
+    <!ATTLIST channel version CDATA #REQUIRED>
+    <!ELEMENT item ((title,link,description?)|(title,description?,link)|
+            (description?,title,link)| (description?,link,title) | (link,title,description?) | (link,description?,title))>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT link (#PCDATA)>
+    <!ELEMENT language (#PCDATA)>
+    <!ELEMENT image ((title,link,url)|(link,url,title)|(url,title,link)|(url,link,title) | (link,title,url) | (title,url,link))>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT url (#PCDATA)>
+]>
+<channel version="1.0">
+    <item>
+        <title>Amazon</title>
+        <link>https://www.amazon.com/</link>
+        <description>Info for Amazon</description>
+    </item>
+    <title>Amazon Music</title>
+    <link>https://www.amazon.com/music</link>
+    <language>English</language>
+    <image>
+        <title>Amazon</title>
+        <link>Logo</link>
+        <url>https://ibb.co/LCyvtKp</url>
+    </image>
+    <description>Some description</description>
+</channel>

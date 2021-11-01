@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Взимаме XML документа от задача 5-->
+
+<!DOCTYPE channel  SYSTEM "task9.dtd">
+<channel version="1.0">
+    <item>
+        <title>Amazon</title>
+        <link>https://www.amazon.com/</link>
+        <description>Info for Amazon</description>
+    </item>
+    <title>Amazon Music</title>
+    <link>https://www.amazon.com/music</link>
+    <language>English</language>
+    <image>
+        <title>Amazon</title>
+        <link>Logo</link>
+        <url>https://ibb.co/LCyvtKp</url>
+    </image>
+    <description>Some description</description>
+</channel>

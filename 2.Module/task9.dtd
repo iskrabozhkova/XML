@@ -1,0 +1,21 @@
+<!--Oт всички условни части на DTD за XML документа ще бъде валидна тази, 
+    която е означена с INCLUDE - елементите item, title, link и description. Елементите language и image
+    ще бъдат игнорирани.-->
+
+<!ELEMENT channel (item+, title, link, language?, image*,description)>
+<!ATTLIST channel version CDATA #REQUIRED>
+<!ELEMENT url (#PCDATA)>
+<!ENTITY % ignoreElements "IGNORE"> 
+<!ENTITY % includeElements "INCLUDE"> 
+
+<![%ignoreElements; [
+    <!ELEMENT language (#PCDATA)>
+    <!ELEMENT image ((title,link,url)|(link,url,title)|(url,title,link)|(url,link,title) | (link,title,url) | (title,url,link))>
+]]>
+<![%includeElements; [
+    <!ELEMENT item ((title,link,description?)|(title,description?,link)|
+            (description?,title,link)| (description?,link,title) | (link,title,description?) | (link,description?,title))>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT link (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+]]>

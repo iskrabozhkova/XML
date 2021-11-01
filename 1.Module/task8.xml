@@ -2,10 +2,10 @@
 
 <CinemaCityParadise>
     <BasicInformation>
-        <address>София, бул. Черни връх 100, в сградата на Paradise Center</address>
-        <number>02 903 74 74</number>
-        <email>info.paradise@cinemacity.bg</email>
-        <info>Мултиплекс Cinema City Парадайз разполага с 14 модерни киносалона с 2166 места, първата 4DX зала в България и съоръжения за посетители в инвалидни колички.</info>
+        <Address>София, бул. Черни връх 100, в сградата на Paradise Center</Address>
+        <PhoneNumber>02 903 74 74</PhoneNumber>
+        <Email>Information.paradise@cinemacity.bg</Email>
+        <Information>Мултиплекс Cinema City Парадайз разполага с 14 модерни киносалона с 2166 места, първата 4DX зала в България и съоръжения за посетители в инвалидни колички.</Information>
     </BasicInformation>
     <Prices>
         <Monday>
@@ -87,8 +87,23 @@
         </Sunday>
     </Prices>
     <Movies>
-        <Movie name="Movie" date="10.05" time="10:00"></Movie>
-        <Movie name="Other movie" date="25.06" time="11:00"></Movie>
-        <Movie name="Movie" date="13.07" time="12:00"></Movie>
+        <Movie>
+            <Title>Movie</Title>
+            <Projections>
+                <Projection>
+                    <Date>20.01.2021</Date>
+                    <Hour>15:00</Hour>
+                </Projection>
+            </Projections>
+        </Movie>
+        <Movie>
+            <Title>Other movie</Title>
+            <Projections>
+                <Projection>
+                    <Date>15.07.2021</Date>
+                    <Hour>10:00</Hour>
+                </Projection>
+            </Projections>
+        </Movie>
     </Movies>
 </CinemaCityParadise>
