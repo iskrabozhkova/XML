@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Task6_4.xsd">
+ <customer>
+     <account></account>
+ </customer>
+</envelope>

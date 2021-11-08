@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <!--Създавам XML документ, за да валидирам задачата. -->
+<collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="task1.xsd">
+    <description>Description</description>
+    <recipe>
+        <title>Title</title>
+        <ingredient name="ingredient">
+            <preparation>
+                <step>First step</step>
+                <step>Second step</step>
+            </preparation>
+        </ingredient>
+        <preparation>
+            <step>First step</step>
+            <step>Second step</step>
+        </preparation>
+        <comment>Comment</comment>
+        <nutrition protein="" carbohydrates="" fat="" calories="" />
+    </recipe>
+</collection>

@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--TO DO: CDATA какъв тип е? -->
+
+<!--Cъздавам валидна XML Schema като описвам дадените елементи от DTD схемата. Съобразявам
+  операторите за честота с помощта на minOccurs и maxOccurs. От DTD схемата установявам типа на елементите и атрибутите
+  и също го отразявам в схемата. -->
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
    <xs:element name="collection">
     <xs:complexType>
-        <xs:sequence>
-          <xs:element name="description"/>
+        <xs:sequence> 
+          <xs:element name="description">
+            <xs:complexType mixed="true">
+                <xs:sequence>
+                    <!--Елементът description трябва да е от тип ANY-->
+                    <xs:any minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            </xs:element> 
           <xs:element name="recipe" minOccurs="0" maxOccurs="unbounded">
             <xs:complexType>
               <xs:sequence>
                   <xs:element name="title" type="xs:string"></xs:element>
-
-                  <xs:element name="ingerdient" minOccurs="0" maxOccurs="unbounded">
+                  <xs:element name="ingredient" minOccurs="0" maxOccurs="unbounded">
                     <xs:complexType>
                       <xs:sequence>
                         <xs:element name="preparation" minOccurs="0" maxOccurs="1">
@@ -21,14 +30,13 @@
                             </xs:sequence>
                           </xs:complexType>
                         </xs:element>
-
                       </xs:sequence>
                       <xs:attribute name="name" use="required"/>
                       <xs:attribute name="amount"/>
                       <xs:attribute name="unit"/>
                     </xs:complexType>
                   </xs:element>
-                  <xs:element name="preparation">
+                  <xs:element name="preparation" minOccurs="0" maxOccurs="1">
                     <xs:complexType>
                       <xs:sequence>
                         <xs:element name="step" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
@@ -38,11 +46,12 @@
                   <xs:element name="comment" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
                   <xs:element name="nutrition">
                       <xs:complexType>
-                        <xs:attribute name="protein" use="required"/>
-                        <xs:attribute name="carbohydrates" use="required"/>
-                        <xs:attribute name="fat" use="required"/>
-                        <xs:attribute name="calories" use="required"/>
-                        <xs:attribute name="alcohol"/>
+                          <!--Елементите, които трябва да ги има, са означени със use="required"-->
+                        <xs:attribute name="protein" type="xs:string" use="required"/>
+                        <xs:attribute name="carbohydrates" type="xs:string" use="required"/>
+                        <xs:attribute name="fat" type="xs:string" use="required"/>
+                        <xs:attribute name="calories" type="xs:string" use="required"/>
+                        <xs:attribute name="alcohol" type="xs:string"/>
                       </xs:complexType>
                   </xs:element>
               </xs:sequence>
@@ -55,23 +64,3 @@
 
 
 
-
-<!--
-@<!ELEMENT collection (description,recipe*)>
-@<!ELEMENT description ANY>
-@<!ELEMENT recipe (title,ingredient*,preparation,comment?,nutrition)>
-@<!ELEMENT title (#PCDATA)>
-@<!ELEMENT ingredient (preparation?)>
-@<!ATTLIST ingredient name CDATA #REQUIRED
-                     amount CDATA #IMPLIED
-                     unit CDATA #IMPLIED>
-@<!ELEMENT preparation (step*)>
-@<!ELEMENT step (#PCDATA)>
-@<!ELEMENT comment (#PCDATA)>
-@<!ELEMENT nutrition EMPTY>
-<!ATTLIST nutrition protein CDATA #REQUIRED
-                    carbohydrates CDATA #REQUIRED
-                    fat CDATA #REQUIRED
-                    calories CDATA #REQUIRED
-                    alcohol CDATA #IMPLIED>
--->

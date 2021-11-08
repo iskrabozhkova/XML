@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"  standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+ <!--Eлементите customers, saving_account, customer_accounts, cheching_accounts са дефинирани като комплексен глобален тип, 
+	а елемента accounts като комплексен локален тип-->
+
+	<xs:element name="bank">
+		<xs:complexType>
+            <!--Редът на срещане на под-елементите на bank няма значение-->
+			<xs:all>
+				<xs:element name="accounts">
+					<xs:complexType>
+			<!--Редът на срещане на под-елементите на accounts няма значение-->
+						<xs:all>
+							<xs:element ref="saving_accounts"/>
+							<xs:element ref="checking_accounts"/>
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="customers" minOccurs="1"/>
+				<xs:element ref="customer_accounts" minOccurs="1"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+    <xs:element name="name" type="xs:string"/>
+	<xs:element name="address" type="xs:string"/>
+	<xs:element name="customer">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name"/>
+				<xs:element ref="address"/>
+			</xs:sequence>
+			<!--Всеки клиент си има уникален идентификатор-->
+			<xs:attribute name="id" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="customers">
+		<xs:sequence>
+			<xs:element ref="customer" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="customers" type="customers"/>
+    <xs:element name="balance">
+		<xs:simpleType>
+			<!--Използвам рестрикция, за да отразя, че балансът на сметката не може да бъде по-малък от -5000-->
+			<xs:restriction base="xs:integer">
+				<xs:minInclusive value="-5000"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+    
+	<xs:element name="saving_account">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="balance"/>
+			</xs:sequence>
+			<!--Сметката saving_account трябва да има уникален идентификатор-->
+			<xs:attribute name="id" type="xs:ID" use="required"/>
+			<xs:attribute name="interest" type="xs:decimal"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="checking_account">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="balance"/>
+			</xs:sequence>
+			<!--Сметката cheching_account трябва да има уникален идентификатор-->
+			<xs:attribute name="id" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="customer_account">
+		<xs:complexType>
+			<!--Атрибутът c_id реферира към съответния клиент, а ac_id към съответната му сметка-->
+			<xs:attribute name="c_id" type="xs:IDREF" use="required"/>
+			<xs:attribute name="ac_id" type="xs:IDREF" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="saving_accounts">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="saving_account" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="checking_accounts">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="checking_account" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="customer_accounts">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="customer_account" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

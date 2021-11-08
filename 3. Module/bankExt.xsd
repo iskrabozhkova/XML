@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"  standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!--Предефинирам минималната стойност на balance-->
+   <xs:redefine schemaLocation="bank.xsd">
+     <xs:simpleType name="balanceMin">
+       <xs:restriction base="balanceMin">
+            <xs:minInclusive value="-5200"/>
+       </xs:restriction>
+     </xs:simpleType>
+   </xs:redefine>
+
+<!--За типът customerExt добавям нов под-елемент image от тип base64Binary добавям атрибут src от тип string-->
+   <xs:redefine schemaLocation="bank.xsd">
+    <xs:complexType name="customerExt">
+        <xs:complexContent>
+            <xs:extension base="customerExt">
+            <xs:sequence>
+                <xs:element name="image" type="image"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+
+  </xs:redefine>
+
+  <xs:complexType name="image">
+    <xs:simpleContent>
+        <xs:extension base="xs:base64Binary">
+            <xs:attribute name="src" type="xs:string" use="required"/>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+</xs:schema>
