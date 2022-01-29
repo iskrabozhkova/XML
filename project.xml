@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Catalog SYSTEM "project.dtd">
+<?xml-stylesheet type="pdf/xsl" href="project.xsl"?>
+<Catalog>
+  <Bulgarian>
+    <Book ISBN="_9543202133" category="c1">
+	  <title>A brief history of the future</title>
+	  <authors>
+	    <author>
+		  <first_name>Jacques</first_name>
+		  <last_name>Attali</last_name>
+		</author>
+	  </authors>
+	  <series>no</series>
+	  <cover type="soft">
+	    <picture name="photo_1"/>
+	  </cover>
+	  <publisher>
+	    <name>Riva</name>
+	  </publisher>
+	  <edition>2021</edition>
+	  <price>15.90</price>
+	  <pages>232</pages>
+	</Book>
+	<Book ISBN="_9542611721" category="c2">
+		<title>Me before you</title>
+		<authors>
+		  <author>
+			<first_name>Jojo</first_name>
+			<last_name>Moyes</last_name>
+		  </author>
+		</authors>
+		<series>yes</series>
+		<cover type="soft"/>
+		<publisher>
+		  <name>Hermes</name>
+		  <address>Plovdiv, "Bogomil" Str, 59, floor 3 </address>
+		</publisher>
+		<edition>2021</edition>
+		<price>17.95</price>
+		<pages>408</pages>
+	</Book>
+	<Book ISBN="_6190207665" category="c3">
+	  <title>The Zone Diet</title>
+	  <authors>
+	    <author>
+		  <first_name>Barry</first_name>
+		  <last_name>Sears</last_name>
+		</author>
+	  </authors>
+	  <series>no</series>
+	  <cover type="soft"/>
+	  <publisher>
+	    <name>Kolibri</name>
+		<address>Sofia, "Ivan Vazov" Str, 56</address>
+	  </publisher>
+	  <edition>2021</edition>
+	  <price>20.00</price>
+	  <pages>320</pages>
+	</Book>
+	<Book ISBN="_9546601896" category="c4">
+		<title>The iron lamp</title>
+		<authors>
+		  <author>
+			<first_name>Dimitar</first_name>
+			<last_name>Talev</last_name>
+		  </author>
+		</authors>
+		<series>yes</series>
+		<cover type="soft">
+		  <picture name="photo_5"/>
+		</cover>
+		<publisher>
+		  <name>Peter Pan</name>
+		  <address>Sofia, 117 Tsarigradsko Shosse Blvd.</address>
+		</publisher>
+		<edition>2012</edition>
+		<price>8.90</price>
+		<pages>416</pages>
+	</Book>
+	<Book ISBN="_6191573479" category="c5">
+		<title>Variable reality</title>
+		<authors>
+		  <author>
+			<first_name>Blake</first_name>
+			<last_name>Crouch</last_name>
+		  </author>
+		</authors>
+		<series>no</series>
+		<cover type="soft"/>
+		<publisher>
+		  <name>Ibis</name>
+		</publisher>
+		<edition>2020</edition>
+		<price>15.90</price>
+		<pages>364</pages>
+	</Book>
+  </Bulgarian>
+  
+  <Foreign>
+    <Book ISBN="_0444513953" category="c6">
+	  <title>Handbook of Economic Forecasting vol.1</title>
+	  <authors>
+	    <author>
+		  <first_name>Graham</first_name>
+		  <last_name>Elliott</last_name>
+		</author>
+		<author>
+		  <first_name>Clive</first_name>
+		  <middle_name>W.J.</middle_name>
+		  <last_name>Granger</last_name>
+		</author>
+		<author>
+		  <first_name>Allan</first_name>
+		  <last_name>Timmermann</last_name>
+		</author>
+	  </authors>
+	  <language>English</language>
+	  <series>yes</series>
+	  <cover type="hard">
+	    <picture name="photo_2"/>
+	  </cover>
+	  <publisher>
+	    <name>North-Holland-Publishing-Co</name>
+		<address>Customer Service Department P.O. Box 211 Amsterdam </address>
+	  </publisher>
+	  <edition>2006</edition>
+	  <price>322.00</price>
+	  <pages>1070</pages>
+	</Book>
+	<Book ISBN="_1405391245" category="c7">
+	  <title>The Psychology Book</title>
+	  <authors>
+	    <author>
+		  <first_name>Catherine</first_name>
+		  <last_name>Collin</last_name>
+		</author>
+	  </authors>
+	  <language>English</language>
+	  <series>no</series>
+	  <cover type="hard">
+	    <picture name="photo_3"/>
+	  </cover>
+	  <publisher>
+	    <name>Dorling Kindersley</name>
+		<address>One Embassy Gardens, 8 Viaduct Gardens, London SW11 7BW.</address>
+	  </publisher>
+	  <edition>2012</edition>
+	  <price>42.00</price>
+	  <pages>352</pages>
+	</Book>
+	<Book ISBN="_1612680194" category="c8">
+		<title>Rich Dad Poor Dad</title>
+		<authors>
+		  <author>
+			<first_name>Robert</first_name>
+			<last_name>Kiyosaki</last_name>
+		  </author>
+		</authors>
+		<language>English</language>
+		<series>yes</series>
+		<cover type="soft">
+		  <picture name="photo_4"/>
+		</cover>
+		<publisher>
+		  <name>Plata Publishing</name>
+		</publisher>
+		<edition>2017</edition>
+		<price>24.00</price>
+		<pages>336</pages>
+	  </Book>
+  </Foreign>
+  
+  <Categories>
+	<Category name="Politics" id="c1"/>
+	<Category name="Love novels" id="c2"/>
+	<Category name="Nutrition and health" id="c3"/>
+	<Category name="Historical novels" id="c4"/>
+	<Category name="Fiction" id="c5"/>
+	<Category name="Economic literature" id="c6"/>
+	<Category name="Psychology" id="c7"/>
+	<Category name="Personal development" id="c8"/>
+  </Categories>
+</Catalog>

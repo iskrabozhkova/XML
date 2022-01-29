@@ -1,0 +1,34 @@
+<!ELEMENT Catalog (Bulgarian,Foreign,Categories)>
+<!ELEMENT Bulgarian (Book*)>
+<!ELEMENT Foreign (Book*)>
+<!ELEMENT Book (title,authors,language?,series,cover,publisher,edition,price,pages)>
+<!ATTLIST Book ISBN ID #REQUIRED
+               category IDREF #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT authors (author+)>
+<!ELEMENT author (first_name,middle_name?,last_name)>
+<!ELEMENT first_name (#PCDATA)>
+<!ELEMENT middle_name (#PCDATA)>
+<!ELEMENT last_name (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT series (#PCDATA)>
+<!ELEMENT cover (picture?)>
+<!ATTLIST cover type CDATA #IMPLIED>
+<!ELEMENT publisher (name,address?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT edition (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT pages (#PCDATA)>
+<!ELEMENT Categories (Category+)>
+<!ELEMENT Category EMPTY>
+<!ATTLIST Category name CDATA #REQUIRED
+                   id ID #REQUIRED>
+<!ELEMENT picture EMPTY>
+<!ATTLIST picture name ENTITY #REQUIRED>
+<!ENTITY photo_1 SYSTEM "kratka-istoria-na-bydeshteto.jpg" NDATA pic>
+<!ENTITY photo_2 SYSTEM "436223z.jpg" NDATA pic>
+<!ENTITY photo_3 SYSTEM "the-psychology-book-30.jpg" NDATA pic>
+<!ENTITY photo_4 SYSTEM "81dQwQlmAXL.jpg" NDATA pic>
+<!ENTITY photo_5 SYSTEM "zhelezniat-svetilnik.jpg" NDATA pic>
+<!NOTATION pic PUBLIC "jpg/png">
